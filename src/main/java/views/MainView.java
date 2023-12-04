@@ -3,6 +3,7 @@ package views;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 
 /**
  * Main view for the application
@@ -24,6 +25,9 @@ public class MainView extends JFrame {
     setLocationRelativeTo(null); // center the window
     createForm(Constants.dropdownOptions); // default options
     createTable();
+
+    UIManager.put("Component.focusWidth", 0);
+    UIManager.put("TextComponent.arc", 5);
   }
 
   private void createForm(String[] options) {
